@@ -1,10 +1,5 @@
 %article.video_category
-  - @categories.each do |cat|
-    %header
-      %h3= link_to cat.name, cat.name
-    .videos.row
-      - @videos.each do |v|
-        - if v.category_id == cat.id
-          .video.col-sm-
-            = link_to video do
-              %image_tag v.small_cover_url
+  - @results.each do |v|
+    .video.col-sm-
+      = link_to v do
+        = image_tag v.small_cover_url

@@ -6,10 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Category.create(name: 'comedy')
-Category.create(name: 'drama')
-Category.create(name: 'reality')
-Category.create(name: 'watched recently')
+comedy = Category.create(name: 'comedy')
+drama = Category.create(name: 'drama')
+reality = Category.create(name: 'reality')
+watched = Category.create(name: 'watched recently')
 
 Video.create(title: 'South Park', description: 'A comedy of messed up kids', small_cover_url: '/tmp/south_park.jpg', category: comedy)
 Video.create(title: 'Family Guy', description: 'Basically copying south park and Simpsons', small_cover_url: '/tmp/family_guy.jpg', category: comedy)
