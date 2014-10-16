@@ -5,7 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Video.create(title: 'South Park', description: 'A comedy of messed up kids', small_cover_url: '/tmp/south_park.jpg')
-Video.create(title: 'Family Guy', description: 'Basically copying south park and Simpsons', small_cover_url: '/tmp/family_guy.jpg')
-Video.create(title: 'Futurama', description: 'An oddly attractive alien chick', small_cover_url: '/tmp/futurama.jpg')
-Video.create(title: 'Monk', description: 'A delusional mental patient', small_cover_url: '/tmp/monk.jpg', large_cover_url: '/tmp/monk_large.jpg')
+
+Category.create(name: 'comedy')
+Category.create(name: 'drama')
+Category.create(name: 'reality')
+Category.create(name: 'watched recently')
+
+Video.create(title: 'South Park', description: 'A comedy of messed up kids', small_cover_url: '/tmp/south_park.jpg', category: comedy)
+Video.create(title: 'Family Guy', description: 'Basically copying south park and Simpsons', small_cover_url: '/tmp/family_guy.jpg', category: comedy)
+Video.create(title: 'Futurama', description: 'An oddly attractive alien chick', small_cover_url: '/tmp/futurama.jpg', category: comedy)
+Video.create(title: 'Monk', description: 'A delusional mental patient', small_cover_url: '/tmp/monk.jpg', large_cover_url: '/tmp/monk_large.jpg', category: drama)
